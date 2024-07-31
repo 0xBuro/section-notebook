@@ -12,6 +12,7 @@ book:
   chapters:
     - index.qmd
     - section.ipynb
+    - hmammals.ipynb
   repo-url: https://github.com/0xBuro/section-notebook
   repo-actions: [edit]
   downloads: [pdf,docx,epub]

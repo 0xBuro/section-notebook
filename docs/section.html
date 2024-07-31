@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./hmammals.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -147,6 +148,11 @@ ul.task-list li input[type="checkbox"] {
   <a href="./section.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Die Saaldecke der Renaissance von Balthasar Katzenberger</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hmammals.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Jagd auf Säugetiere</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -177,20 +183,6 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>How to use your own text for processing</strong></p>
-<ol type="1">
-<li>Add a new Text item to the wikibase. <a href="https://computational-publishing-service.wikibase.cloud/wiki/Special:NewItem">link to wikibase new item</a> the item should contain the following statements:</li>
-</ol>
-<ul>
-<li>P57 (external link): link to the html file containing the new text</li>
-<li>P46 (kurator): Item of the curator. you may use an existing item like Q210 (Ulrike seeger) for test purposes</li>
-<li>P53 (license): Item of a license for the text. e.g Q203 (CC BY-NC-ND 4.0 DEED )</li>
-<li>P6 (is part of): set value to Q218 (Schlossanlage Weikersheim)</li>
-</ul>
-<ol start="2" type="1">
-<li><p>check if your new text item occurs in the list of selected text items: <a href="https://computational-publishing-service.wikibase.cloud/query/#PREFIX%20cps%3A%20%3Chttps%3A%2F%2Fcomputational-publishing-service.wikibase.cloud%2Fentity%2F%3E%0APREFIX%20cpss%3A%20%3Chttps%3A%2F%2Fcomputational-publishing-service.wikibase.cloud%2Fentity%2Fstatement%2F%3E%0APREFIX%20cpsv%3A%20%3Chttps%3A%2F%2Fcomputational-publishing-service.wikibase.cloud%2Fvalue%2F%3E%0APREFIX%20cpspt%3A%20%3Chttps%3A%2F%2Fcomputational-publishing-service.wikibase.cloud%2Fprop%2Fdirect%2F%3E%0APREFIX%20cpsp%3A%20%3Chttps%3A%2F%2Fcomputational-publishing-service.wikibase.cloud%2Fprop%2F%3E%0APREFIX%20cpsps%3A%20%3Chttps%3A%2F%2Fcomputational-publishing-service.wikibase.cloud%2Fprop%2Fstatement%2F%3E%0APREFIX%20cpspq%3A%20%3Chttps%3A%2F%2Fcomputational-publishing-service.wikibase.cloud%2Fprop%2Fqualifier%2F%3E%0A%0ASELECT%20%3FtextItem%20%3FkuratorLabel%20%3FtextUrl%0AWHERE%0A%7B%0A%20%20%3FtextItem%20cpsp%3AP46%20%3FkuratorStatement.%20%0A%20%20%3FkuratorStatement%20cpsps%3AP46%20%3FkuratorItem.%20%0A%20%20%3FkuratorItem%20rdfs%3Alabel%20%3FkuratorLabel.%0A%20%20%3FtextItem%20cpsp%3AP57%20%3Furlstatement.%20%0A%20%20%3Furlstatement%20cpsps%3AP57%20%3FtextUrl.%20%0A%7D">Link to wikibase query service</a></p></li>
-<li><p>set parameter of get_text() to the id of your new text item e.g.: get_text(“Q209”)</p></li>
-</ol>
 <p>Wikibase link: <a href="https://computational-publishing-service.wikibase.cloud/entity/Q229">https://computational-publishing-service.wikibase.cloud/entity/Q229</a></p>
 <p>Kurator: Seeger, Ulrike</p>
 b’<!-- Die Saaldecke der Renaissance von Balthasar Katzenberger --><br>&lt;!DOCTYPE html&gt;<br>
@@ -249,12 +241,6 @@ Vertragsbedingungen
 
 <p><br></p>
 <hr>
-<p><strong>How to select images for processing</strong></p>
-<p>Images are selected via the sparql query. The method get_img() is capable of using a wikibase item id as parameter to select images with the property P6 (is part of) linking to the given item id.</p>
-<ol type="1">
-<li><p>select a valid location id from the query result: <a href="https://computational-publishing-service.wikibase.cloud/query/#PREFIX%20cps%3A%20%3Chttps%3A%2F%2Fcomputational-publishing-service.wikibase.cloud%2Fentity%2F%3E%0APREFIX%20cpss%3A%20%3Chttps%3A%2F%2Fcomputational-publishing-service.wikibase.cloud%2Fentity%2Fstatement%2F%3E%0APREFIX%20cpsv%3A%20%3Chttps%3A%2F%2Fcomputational-publishing-service.wikibase.cloud%2Fvalue%2F%3E%0APREFIX%20cpspt%3A%20%3Chttps%3A%2F%2Fcomputational-publishing-service.wikibase.cloud%2Fprop%2Fdirect%2F%3E%0APREFIX%20cpsp%3A%20%3Chttps%3A%2F%2Fcomputational-publishing-service.wikibase.cloud%2Fprop%2F%3E%0APREFIX%20cpsps%3A%20%3Chttps%3A%2F%2Fcomputational-publishing-service.wikibase.cloud%2Fprop%2Fstatement%2F%3E%0APREFIX%20cpspq%3A%20%3Chttps%3A%2F%2Fcomputational-publishing-service.wikibase.cloud%2Fprop%2Fqualifier%2F%3E%0A%0ASELECT%20DISTINCT%20%3FpartOfItem%20%3FpartOfItemLabel%0AWHERE%0A%7B%0A%20%20%3FimgItem%20cpsp%3AP107%20%3FurlStatement.%20%0A%20%20%3FurlStatement%20cpsps%3AP107%20%3FimgUrl.%20%0A%20%20%3FimgItem%20cpsp%3AP60%20%3FdateStatement.%20%0A%20%20%3FdateStatement%20cpsps%3AP60%20%3FpublishDate.%20%0A%20%20%3FimgItem%20cpsp%3AP6%20%3FpartOfStatement.%0A%20%20%3FpartOfStatement%20cpsps%3AP6%20%3FpartOfItem.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22de%2Cen%22.%0A%20%20%20%20%20%20%3FpartOfItem%20rdfs%3Alabel%20%3FpartOfItemLabel.%0A%20%20%20%20%20%20%3FpartOfItem%20schema%3Adescription%20%3FpartOfItemDescr.%0A%20%20%20%20%7D%0A%7D%20GROUP%20BY%20%3FpartOfItem%20%3FpartOfItemLabel">Link to wikibase query service</a></p></li>
-<li><p>set parameter of get_img() to the id of your selected location item e.g.: get_img(“Q217”)</p></li>
-</ol>
 <p>Wikibase link: <a href="https://computational-publishing-service.wikibase.cloud/entity/Q230">https://computational-publishing-service.wikibase.cloud/entity/Q230</a></p>
 <p>Title: Ceiling Decoration of the Knights’ Hall – Eastern Part of the Ceiling</p>
 <p>Year: 2018</p>
@@ -692,6 +678,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./hmammals.html" class="pagination-link" aria-label="Jagd auf Säugetiere">
+        <span class="nav-page-text"><span class="chapter-title">Jagd auf Säugetiere</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

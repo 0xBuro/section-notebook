@@ -11,8 +11,10 @@ book:
   # this section determines which files will be added to the book as chapters
   chapters:
     - index.qmd
-    - section.ipynb
-    - hmammals.ipynb
+    - ceiling.ipynb
+    - mammals.ipynb
+    - birds.ipynb
+    - fishes.ipynb
   repo-url: https://github.com/0xBuro/section-notebook
   repo-actions: [edit]
   downloads: [pdf,docx,epub]
